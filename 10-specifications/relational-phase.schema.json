@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://trivianinstitute.org/schemas/tria-diachronic-sovereignty/relational-phase.schema.json",
+  "title": "TRIA Relational Phase",
+  "description": "Draft schema for lifecycle state. Phase is a governance category, not a claim about sentiment, intimacy, or consciousness.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["phase_id", "relationship_id", "phase", "effective_at", "recorded_at"],
+  "properties": {
+    "phase_id": {"type": "string", "minLength": 1},
+    "relationship_id": {"type": "string", "minLength": 1},
+    "phase": {
+      "type": "string",
+      "enum": ["engage", "deepen", "stabilize", "rest", "dormant", "renew", "transform", "dissolved", "unknown"]
+    },
+    "scope": {"type": ["string", "null"]},
+    "effective_at": {"type": "string", "format": "date-time"},
+    "ended_at": {"type": ["string", "null"], "format": "date-time"},
+    "trigger": {"type": ["string", "null"]},
+    "resource_boundary_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "consent_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "provenance_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "supersedes": {"type": ["string", "null"]},
+    "recorded_at": {"type": "string", "format": "date-time"}
+  }
+}
