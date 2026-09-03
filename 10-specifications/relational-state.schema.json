@@ -2,10 +2,10 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://trivianinstitute.org/schemas/tria-diachronic-sovereignty/relational-state.schema.json",
   "title": "TRIA Diachronic Sovereignty Relational State",
-  "description": "Draft machine-readable representation of governance-relevant relational state. This schema is a specification precursor, not a validated production standard.",
+  "description": "Draft machine-readable projection of governance-relevant relational state. This schema is a specification precursor, not a validated production standard. Structural validity does not establish factual truth, valid consent, legitimate authority, or safety.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["relationship_id", "participants", "lifecycle_status", "updated_at"],
+  "required": ["relationship_id", "participants", "updated_at"],
   "properties": {
     "relationship_id": {"type": "string", "minLength": 1},
     "participants": {
@@ -14,9 +14,16 @@
       "uniqueItems": true,
       "items": {"type": "string", "minLength": 1}
     },
+    "active_phase_refs": {
+      "type": "array",
+      "description": "References to currently operative relational-phase records. More than one scoped phase may be active at the same time.",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
     "lifecycle_status": {
-      "type": "string",
-      "enum": ["engage", "deepen", "stabilize", "rest", "dormant", "renew", "transform", "dissolved", "unknown"]
+      "type": ["string", "null"],
+      "description": "Optional coarse summary for compatibility. It must not be treated as proof that the relationship has one exclusive global phase.",
+      "enum": ["engage", "deepen", "stabilize", "rest", "dormant", "renew", "transform", "dissolved", "unknown", null]
     },
     "consent_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
     "authority_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
@@ -27,6 +34,12 @@
     "provenance_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
     "unresolved_difference_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
     "transformation_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "projection_basis_refs": {
+      "type": "array",
+      "description": "References to events, records, or reducers used to derive this current-state projection.",
+      "items": {"type": "string"},
+      "uniqueItems": true
+    },
     "policy_version": {"type": ["string", "null"]},
     "created_at": {"type": ["string", "null"], "format": "date-time"},
     "updated_at": {"type": "string", "format": "date-time"},

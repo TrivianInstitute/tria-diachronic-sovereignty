@@ -2,11 +2,11 @@
 
 **Epistemic status:** PROVENANCE RECORD
 
-This file records architectural development milestones at the repository layer level. It is not a substitute for Git history, pull-request history, release tags, or future formal changelogs.
+This file records architectural development milestones at the repository layer level. It complements Git history, pull-request history, release tags, and `CHANGELOG.md` by preserving architectural meaning.
 
-## Initial architecture build
+## v1.0.0 — 2026-09-03
 
-The initial build established the following sequence:
+The initial architecture build established the following sequence:
 
 1. orientation and scope;
 2. foundational governance concepts;
@@ -23,7 +23,10 @@ The initial build established the following sequence:
 13. tests and falsification scaffolding;
 14. research agenda and measurement problems;
 15. worked examples;
-16. provenance records.
+16. provenance records;
+17. final release-hardening audit.
+
+The final hardening pass added automated testing, schema metavalidation, explicit software licensing, contribution guidance, release changelog, reproducible dependencies, and a repository audit record.
 
 ## Architectural maturity
 
@@ -35,7 +38,7 @@ The repository deliberately contains multiple maturity levels at once:
 - **HYPOTHESIS / OPEN QUESTION** — claims requiring empirical work;
 - **FAILURE MODE** — named diagnostic patterns that remain contestable.
 
-A later version number must not be interpreted as evidence that all layers have reached the same level of validation.
+Version `1.0.0` means the planned research architecture is structurally complete. It does **not** mean that all layers have reached the same level of empirical validation or production maturity.
 
 ## Change discipline
 
@@ -52,4 +55,6 @@ Git commits preserve chronology. This record preserves architectural meaning.
 
 ## Current status
 
-The initial repository build should be treated as a research architecture with experimental executable components, not as a production-certified governance standard.
+TRIA Diachronic Sovereignty v1.0.0 should be treated as a **falsifiable research architecture with experimental executable components**, not as a production-certified governance standard or independently validated scientific theory.
+
+Future versions may strengthen, revise, or reject parts of the architecture without invalidating the provenance of what v1.0.0 claimed, implemented, tested, or left unresolved.

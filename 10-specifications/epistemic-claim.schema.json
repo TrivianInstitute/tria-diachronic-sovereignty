@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://trivianinstitute.org/schemas/tria-diachronic-sovereignty/epistemic-claim.schema.json",
   "title": "TRIA Epistemic Claim",
-  "description": "Draft schema for explicitly typed claims. Epistemic type must not be silently promoted by consumers.",
+  "description": "Draft schema for explicitly typed claims. Epistemic type must not be silently promoted by consumers. Structural validity does not establish factual truth or relational agreement.",
   "type": "object",
   "additionalProperties": false,
   "required": ["claim_id", "relationship_id", "epistemic_type", "content", "source_actor", "recorded_at", "status"],
@@ -13,13 +13,44 @@
       "type": "string",
       "enum": ["observation", "inference", "interpretation", "shared_claim"]
     },
-    "content": {"type": "string", "minLength": 1},
+    "content": {
+      "description": "JSON value representing the claim content. Consumers must not infer authority from representation type."
+    },
     "source_actor": {"type": "string", "minLength": 1},
     "subject_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
     "evidence_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
     "provenance_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
     "derived_from": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
     "scope": {"type": ["string", "null"]},
+    "required_participant_refs": {
+      "type": "array",
+      "description": "Participants whose acknowledgement or procedurally valid acceptance is required for the claim to function as a Shared Claim in the defined scope.",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
+    "acknowledgements": {
+      "type": "array",
+      "description": "Attributable participant positions on the claim. Presence of this array does not by itself establish consensus or a valid Shared Claim.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["participant_ref", "stance", "recorded_at"],
+        "properties": {
+          "participant_ref": {"type": "string", "minLength": 1},
+          "stance": {
+            "type": "string",
+            "enum": ["accept", "reject", "dispute", "abstain", "unknown"]
+          },
+          "authority_basis_ref": {"type": ["string", "null"]},
+          "provenance_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+          "recorded_at": {"type": "string", "format": "date-time"}
+        }
+      }
+    },
+    "shared_scope_basis": {
+      "type": ["string", "null"],
+      "description": "Description or reference identifying the procedural basis on which a Shared Claim is considered operationally accepted within its scope."
+    },
     "uncertainty_note": {"type": ["string", "null"]},
     "status": {
       "type": "string",
@@ -31,5 +62,16 @@
     "recorded_at": {"type": "string", "format": "date-time"},
     "supersedes": {"type": ["string", "null"]},
     "dispute_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {"epistemic_type": {"const": "shared_claim"}},
+        "required": ["epistemic_type"]
+      },
+      "then": {
+        "required": ["required_participant_refs", "acknowledgements", "shared_scope_basis"]
+      }
+    }
+  ]
 }
