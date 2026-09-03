@@ -2,11 +2,11 @@
 
 **Epistemic Status:** EXPERIMENTAL / FALSIFICATION SURFACE
 
-This directory stress-tests the reference implementation against selected governance commitments in the repository.
+This directory stress-tests the reference implementation and specification layer against selected governance commitments in the repository.
 
 The tests are not evidence that the architecture is correct. Passing tests show only that this particular executable interpretation satisfies the behaviors encoded here. Failing tests are useful: they expose mismatch between implementation, specification, or normative intent.
 
-## Initial test targets
+## Current test targets
 
 - no silent epistemic promotion;
 - explicit consent revocation behavior;
@@ -14,16 +14,24 @@ The tests are not evidence that the architecture is correct. Passing tests show 
 - inference-decay posture without invented universal thresholds;
 - re-consent after material continuity change;
 - dormancy as a legitimate lifecycle state;
-- representative failure-mode conditions.
+- representative failure-mode conditions;
+- JSON Schema Draft 2020-12 metavalidation.
 
-## Running
+## Running locally
+
+Use Python 3.11 or newer:
 
 ```bash
-pytest 12-tests
+python -m pip install -r requirements-dev.txt
+pytest -q 12-tests
 ```
 
-The tests assume Python 3.11+ and `pytest`.
+The repository CI runs the same suite on Python 3.11 and 3.12.
+
+## What passing means
+
+Passing tests demonstrate conformance to the behaviors currently encoded in the suite. They do **not** demonstrate factual correctness of recorded claims, legitimate consent, safe authority delegation, scientific validity, or production safety.
 
 ## Research posture
 
-These tests deliberately avoid universal confidence scores, fixed decay rates, continuity metrics, engagement goals, or claims about machine consciousness. Test coverage should expand as the specification and reference implementation mature.
+These tests deliberately avoid universal confidence scores, fixed decay rates, continuity metrics, engagement goals, or claims about machine consciousness. Test coverage should expand when new behavior becomes sufficiently specified to falsify.
