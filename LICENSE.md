@@ -6,9 +6,9 @@ Copyright © 2026 Sarasha Elion. All rights reserved except as expressly granted
 
 Published and stewarded by Trivian Institute.
 
-## 1. Public License for Research and Documentation
+## 1. Public License for Research, Documentation, and Specifications
 
-Unless a file, directory, or accompanying notice states otherwise, the documentation and research materials in this repository are licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)**.
+Unless a file, directory, or accompanying notice states otherwise, the research prose, conceptual documentation, examples, provenance records, and machine-readable specification schemas in this repository are licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)**.
 
 - License summary: https://creativecommons.org/licenses/by-nc-sa/4.0/
 - Full legal code: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
@@ -45,7 +45,7 @@ For this repository:
 ```text
 TRIA Diachronic Sovereignty
 © 2026 Sarasha Elion. Published by Trivian Institute.
-Licensed under CC BY-NC-SA 4.0.
+Licensed under CC BY-NC-SA 4.0 for covered research, documentation, and specifications.
 Source: https://github.com/TrivianInstitute/tria-diachronic-sovereignty
 ```
 
@@ -81,25 +81,26 @@ https://trivianinstitute.org
 
 No commercial permission is granted by an inquiry, discussion, proposal, repository access, or contribution. Commercial permission requires a separate written agreement authorized by the copyright holder.
 
-## 6. Materials Not Covered by This Public License
+## 6. Software Scope
 
-The CC BY-NC-SA 4.0 license applies only to materials for which Sarasha Elion holds the necessary rights and that are released under this notice. It does not automatically apply to:
+The executable Python reference implementation in `11-reference-implementation/`, the Python tests in `12-tests/`, and repository automation/configuration files whose primary purpose is to execute or test that software are **not** licensed under CC BY-NC-SA 4.0.
 
-- executable software or source code carrying a separate software license;
-- datasets, model weights, schemas, or technical assets with separate terms;
+Those software materials are licensed under **GNU Affero General Public License version 3 only (AGPL-3.0-only)** as described in [`SOFTWARE_LICENSE.md`](SOFTWARE_LICENSE.md), unless a file states otherwise.
+
+This separation is intentional: the research architecture and its executable implementation have different licensing requirements.
+
+## 7. Materials Not Covered by These Public Licenses
+
+Neither the documentation license nor the software license automatically grants rights to:
+
+- datasets, model weights, or technical assets carrying separate terms;
 - third-party quotations, images, trademarks, or other materials identified as belonging to others;
 - material used under fair use, another copyright exception, or a third-party license;
 - names, logos, marks, trade dress, or other brand identifiers of Sarasha Elion, Trivian Institute, Trivian Technologies, the Trivian Field, TRIA, or related projects;
-- patent, trademark, privacy, publicity, confidentiality, or other rights not granted by CC BY-NC-SA 4.0; or
+- patent, trademark, privacy, publicity, confidentiality, or other rights not expressly granted; or
 - component repositories that contain their own license files or notices.
 
 When a specific file or component carries different terms, those specific terms control that file or component.
-
-## 7. Software and Future Technical Releases
-
-This repository currently serves as a research and documentation repository for TRIA Diachronic Sovereignty. If software, executable reference implementations, datasets, schemas, or other technical assets are added, they may be released under separate terms appropriate to those materials.
-
-Do not assume that this documentation license grants permission to use separately licensed code, datasets, models, schemas, or technical implementations.
 
 ## 8. Contributions
 
@@ -109,11 +110,13 @@ Unless a separate written contributor agreement or contribution notice states ot
 
 Contributors are responsible for ensuring that they have the rights necessary to submit their contributions.
 
+See [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
 ## 9. No Warranty
 
 The materials are provided **as-is** for research, evaluation, and development. To the maximum extent permitted by applicable law, no warranties are given regarding accuracy, completeness, fitness for a particular purpose, noninfringement, safety, performance, research validity, or suitability for deployment.
 
-Reference implementations, internal tests, conceptual models, simulations, and proposed metrics do not constitute independent empirical validation, professional advice, certification, or a guarantee of outcomes.
+Reference implementations, internal tests, conceptual models, simulations, proposed metrics, and machine-readable schemas do not constitute independent empirical validation, professional advice, certification, or a guarantee of outcomes.
 
 ## 10. Limitation of Liability
 
@@ -123,12 +126,15 @@ To the maximum extent permitted by applicable law, Sarasha Elion, Trivian Instit
 
 For materials released under CC BY-NC-SA 4.0, the Creative Commons legal code controls if this explanatory notice conflicts with or incompletely summarizes that license.
 
+For software released under AGPL-3.0-only, the GNU Affero General Public License version 3 controls.
+
 Nothing in this file limits rights available under applicable copyright exceptions or limitations. Nothing in this file transfers ownership of the covered materials to Trivian Institute or any repository user.
 
 ---
 
 **Copyright holder:** Sarasha Elion  
 **Publisher and research steward:** Trivian Institute  
-**Public documentation license:** CC BY-NC-SA 4.0  
-**Commercial licensing:** Separate written agreement required  
+**Research/documentation/specification license:** CC BY-NC-SA 4.0  
+**Reference software/test license:** AGPL-3.0-only  
+**Commercial licensing:** Separate written agreement may be available  
 **Contact:** [connect@trivianinstitute.org](mailto:connect@trivianinstitute.org)
