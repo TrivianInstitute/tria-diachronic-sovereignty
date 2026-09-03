@@ -34,16 +34,19 @@ def can_promote(
 ) -> bool:
     """Return whether an explicit epistemic promotion is admissible.
 
-    The function deliberately does not use confidence scores. A shared claim requires
-    explicit acknowledgement by the participants required for that relational scope.
+    The function deliberately does not use confidence scores. A Shared Claim requires
+    an explicitly defined non-empty participant scope and acknowledgement by every
+    participant required for that scope. An omitted scope fails closed.
     """
     if claim.claim_type == target:
         return True
 
     if target == ClaimType.SHARED_CLAIM:
-        if claim.disputed:
+        if claim.disputed or not required_participants:
             return False
-        return all(p in claim.acknowledged_by for p in required_participants)
+        required = set(required_participants)
+        acknowledged = set(claim.acknowledged_by)
+        return required.issubset(acknowledged)
 
     allowed = {
         ClaimType.OBSERVATION: {ClaimType.INFERENCE, ClaimType.INTERPRETATION},
