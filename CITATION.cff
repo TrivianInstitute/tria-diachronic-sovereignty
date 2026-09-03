@@ -6,6 +6,11 @@ message: >-
 title: "TRIA Diachronic Sovereignty"
 type: software
 version: "1.0.0"
+date-released: 2026-09-03
+abstract: >-
+  A falsifiable governance architecture for persistent relational intelligence,
+  epistemic sovereignty, continuity, non-convergence, auditability, and mutual
+  transformation across human-AI, AI-AI, organizational, and multi-agent systems.
 authors:
   - family-names: Elion
     given-names: Sarasha
@@ -17,3 +22,7 @@ keywords:
   - relational AI
   - AI governance
   - human-AI systems
+  - multi-agent systems
+  - epistemic sovereignty
+  - consent governance
+  - relational state
