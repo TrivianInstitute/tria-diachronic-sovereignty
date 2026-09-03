@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://trivianinstitute.org/schemas/tria-diachronic-sovereignty/continuity-attestation.schema.json",
+  "title": "TRIA Continuity Attestation",
+  "description": "Draft schema for representing continuity across material change without asserting perfect identity persistence.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["attestation_id", "relationship_id", "subject_actor", "event_type", "recorded_at"],
+  "properties": {
+    "attestation_id": {"type": "string", "minLength": 1},
+    "relationship_id": {"type": "string", "minLength": 1},
+    "subject_actor": {"type": "string", "minLength": 1},
+    "event_type": {
+      "type": "string",
+      "enum": ["model_upgrade", "model_replacement", "memory_migration", "vendor_migration", "architecture_change", "capability_change", "human_change", "rebaseline", "other"]
+    },
+    "prior_state_ref": {"type": ["string", "null"]},
+    "new_state_ref": {"type": ["string", "null"]},
+    "persisted_elements": {"type": "array", "items": {"type": "string"}},
+    "changed_elements": {"type": "array", "items": {"type": "string"}},
+    "removed_elements": {"type": "array", "items": {"type": "string"}},
+    "active_commitment_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "expired_permission_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "reconsent_required_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "uncertainty_note": {"type": ["string", "null"]},
+    "provenance_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "recorded_at": {"type": "string", "format": "date-time"}
+  }
+}
