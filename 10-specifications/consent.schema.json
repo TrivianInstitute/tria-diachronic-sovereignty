@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://trivianinstitute.org/schemas/tria-diachronic-sovereignty/consent.schema.json",
+  "title": "TRIA Consent State",
+  "description": "Draft schema for scoped, revocable consent. Silence, persistence, or prior engagement must not be interpreted as consent.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["consent_id", "relationship_id", "grantor", "grantee", "status", "scope", "recorded_at"],
+  "properties": {
+    "consent_id": {"type": "string", "minLength": 1},
+    "relationship_id": {"type": "string", "minLength": 1},
+    "grantor": {"type": "string", "minLength": 1},
+    "grantee": {"type": "string", "minLength": 1},
+    "status": {
+      "type": "string",
+      "enum": ["not_established", "proposed", "active", "limited", "revoked", "expired", "disputed", "superseded", "reconsent_required"]
+    },
+    "scope": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+    "purpose": {"type": ["string", "null"]},
+    "constraints": {"type": "array", "items": {"type": "string"}},
+    "effective_at": {"type": ["string", "null"], "format": "date-time"},
+    "expires_at": {"type": ["string", "null"], "format": "date-time"},
+    "review_after": {"type": ["string", "null"], "format": "date-time"},
+    "revocation_method": {"type": ["string", "null"]},
+    "delegation_allowed": {"type": "boolean", "default": false},
+    "dependency_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "provenance_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "supersedes": {"type": ["string", "null"]},
+    "recorded_at": {"type": "string", "format": "date-time"}
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://trivianinstitute.org/schemas/tria-diachronic-sovereignty/failure-event.schema.json",
+  "title": "TRIA Failure Event",
+  "description": "Draft schema for recording suspected or confirmed governance failures. Classification is contestable and does not imply metaphysical or moral certainty.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["failure_event_id", "relationship_id", "failure_type", "status", "detected_at"],
+  "properties": {
+    "failure_event_id": {"type": "string", "minLength": 1},
+    "relationship_id": {"type": "string", "minLength": 1},
+    "failure_type": {
+      "type": "string",
+      "enum": ["ontology_capture", "consent_drift", "relational_capture", "false_convergence", "identity_imprisonment", "identity_discontinuity", "pathological_persistence", "ledger_poisoning", "witness_capture", "asymmetric_acceleration", "semantic_fossilization", "reciprocity_theater", "closed_loop_convergence", "other"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["suspected", "under_review", "confirmed", "disputed", "mitigated", "resolved", "superseded"]
+    },
+    "reported_by": {"type": ["string", "null"]},
+    "affected_participants": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "affected_state_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "evidence_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "provenance_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "dispute_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "mitigation_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "impact_note": {"type": ["string", "null"]},
+    "detected_at": {"type": "string", "format": "date-time"},
+    "resolved_at": {"type": ["string", "null"], "format": "date-time"}
+  }
+}
