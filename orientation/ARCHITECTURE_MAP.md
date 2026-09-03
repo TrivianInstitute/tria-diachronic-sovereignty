@@ -2,7 +2,7 @@
 
 TRIA Diachronic Sovereignty is organized as a layered governance architecture.
 
-The repository progresses from foundational principles toward specifications, implementation, testing, and open research.
+The repository progresses from foundational principles toward specifications, implementation, testing, examples, and open research.
 
 ## High-Level Architecture
 
@@ -24,12 +24,12 @@ The repository progresses from foundational principles toward specifications, im
                                   │
        ┌──────────────────────────▼──────────────────────────┐
        │              RELATIONAL METABOLISM                 │
-       │ engage • deepen • rest • renew • dissolve          │
+       │ rest • dormancy • renew • transform • dissolve     │
        └──────────────────────────┬──────────────────────────┘
                                   │
        ┌──────────────────────────▼──────────────────────────┐
        │             EPISTEMIC SOVEREIGNTY                  │
-       │ observation -> inference -> interpretation -> claim│
+       │ typed claims • provenance • no silent promotion    │
        └──────────────────────────┬──────────────────────────┘
                                   │
        ┌──────────────────────────▼──────────────────────────┐
@@ -78,7 +78,7 @@ Core distinction:
 Observation != Inference != Interpretation != Shared Claim
 ```
 
-This layer prevents silent conversion of speculation into relational fact.
+This is a typing distinction, not a required maturity ladder. Any explicit change in epistemic authority must remain inspectable and governed.
 
 ### 04 — Diachronic Governance
 
@@ -86,23 +86,22 @@ Governs continuity across change, including trajectory, consent drift, identity 
 
 ### 05 — Relational Metabolism
 
-Governs the lifecycle of relationship.
+Governs the lifecycle and pace of relationship.
 
-Candidate states include:
+Candidate modes include:
 
 ```text
 ENGAGE
-  ↓
 DEEPEN
-  ↓
 STABILIZE
-  ↓
 REST
-  ↓
-RENEW / TRANSFORM / DISSOLVE
+DORMANT
+RENEW
+TRANSFORM
+DISSOLVE
 ```
 
-Dormancy and active silence may occur without terminating the relationship.
+These modes are not a required sequence and are not ranked from worse to better. Dormancy, active silence, and dissolution may be legitimate outcomes.
 
 ### 06 — Difference and Non-Convergence
 
@@ -110,11 +109,11 @@ Protects disagreement and irreducibility through held difference, partial transl
 
 ### 07 — Emergence and Deliberation
 
-Contains provisional governance mechanisms for consequential or poorly understood relational change. This layer should remain explicitly experimental until operational definitions exist.
+Contains provisional governance mechanisms for consequential or poorly understood relational change. This layer remains explicitly research-oriented where operational definitions are unresolved.
 
 ### 08 — Witness and Audit
 
-Provides optional external legibility through auditability, provenance review, append-only history, witness mechanisms, privacy safeguards, and witness-capture analysis.
+Provides optional external legibility through auditability, provenance review, append-oriented history, witness mechanisms, privacy safeguards, and witness-capture analysis.
 
 Auditability should not require permanent surveillance.
 
@@ -124,15 +123,15 @@ Adversarially examines how the architecture itself can fail. This layer is a cor
 
 ### 10 — Specifications
 
-Contains machine-readable schemas only after corresponding concepts are sufficiently defined.
+Contains machine-readable JSON Schemas for concepts sufficiently defined to represent structurally. Schema validity does not imply truth, legitimate consent, or deployment safety.
 
 ### 11 — Reference Implementation
 
-Contains non-normative executable implementations. Code in this layer is not automatically canonical.
+Contains non-normative executable implementations. Code in this layer is **EXPERIMENTAL** and is not automatically canonical.
 
 ### 12 — Tests
 
-Contains tests for specification consistency, state transitions, epistemic promotion, consent revocation, dispute preservation, lifecycle transitions, and failure conditions.
+Contains falsification-oriented tests for implementation behavior, specification validity, state transitions, epistemic promotion, consent revocation, dispute preservation, lifecycle transitions, and failure conditions.
 
 ### 13 — Research
 
@@ -140,7 +139,11 @@ Contains open questions, measurement problems, research agenda, falsification cr
 
 ### 14 — Examples
 
-Provides scenarios illustrating how the architecture behaves under realistic conditions.
+Provides illustrative scenarios for human–AI, AI–AI, multi-agent, migration, dormancy, disagreement, and dissolution/return conditions. Examples do not create normative rules.
+
+### Provenance
+
+Records genesis, authorship, version history, and source lineage so later revisions can distinguish inherited claims from demonstrated evidence.
 
 ## Core Dependency Structure
 
@@ -157,6 +160,8 @@ RELATIONAL METABOLISM
     ↓
 DIFFERENCE / NON-CONVERGENCE
     ↓
+EMERGENCE / DELIBERATION
+    ↓
 AUDIT / FAILURE ANALYSIS
     ↓
 SPECIFICATION
@@ -164,9 +169,11 @@ SPECIFICATION
 IMPLEMENTATION
     ↓
 TESTING
+    ↓
+RESEARCH / REVISION
 ```
 
-The architecture should not move directly from philosophy to code. Intermediate definitions must become explicit first.
+The architecture should not move directly from philosophy to code. Intermediate definitions must become explicit first, and implementation feedback may revise earlier layers.
 
 ## Two Simultaneous Representations of History
 
@@ -200,25 +207,13 @@ Topology answers:
 
 > What prior relational state matters now, and why?
 
-Both are necessary.
+Both are necessary. Nonchronological retrieval does not erase temporal provenance.
 
 ## Architectural Constraint
 
 No layer should silently elevate a lower-confidence claim into a higher-authority state.
 
-For example:
-
-```text
-Observation
-    ↓
-Inference
-    ↓
-Interpretation
-    ↓
-Shared Claim
-```
-
-Each transition must remain inspectable.
+A relationship may contain an observation, an inference, an interpretation, and a shared claim about related content at the same time. The architecture should preserve their distinct provenance and authority rather than forcing them into one canonical representation.
 
 ## Architectural Objective
 
