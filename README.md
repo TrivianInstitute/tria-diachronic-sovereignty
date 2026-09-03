@@ -623,3 +623,21 @@ TRIA — Trivian Relational Intelligence Architecture
 Developed within the research ecosystem of the Trivian Institute.
 
 For research, critique, implementation, falsification, and continued development of relational governance for increasingly agentic intelligence systems.
+
+⸻
+
+## Citation
+
+If you use this repository in research, teaching, evaluation, training, or a
+derivative work, please cite:
+
+> Sarasha Elion / Trivian Institute. *TRIA Diachronic Sovereignty*, version 1.0.0. https://github.com/TrivianInstitute/tria-diachronic-sovereignty
+
+Machine-readable citation metadata is available in [`CITATION.cff`](CITATION.cff).
+
+
+## License
+
+Unless otherwise noted, the documentation and research materials in this repository are licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). You may share, fork, and adapt them for noncommercial purposes with attribution to Sarasha Elion and Trivian Institute and under the same terms. Commercial use requires a separate written license.
+
+See [`LICENSE.md`](LICENSE.md) and [`CITATION.cff`](CITATION.cff). Commercial licensing: [connect@trivianinstitute.org](mailto:connect@trivianinstitute.org).
