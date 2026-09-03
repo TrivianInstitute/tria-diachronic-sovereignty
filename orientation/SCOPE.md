@@ -1,256 +1,153 @@
-Scope
+# Scope
 
 TRIA Diachronic Sovereignty addresses governance for persistent relational intelligence.
 
 Its primary concern is not one interaction.
 
-It is the continuity of relationship across changing states, capabilities, interpretations, permissions, and identities.
+It is the **continuity of relationship across changing states, capabilities, interpretations, permissions, and identities**.
 
-⸻
+## In Scope
 
-In Scope
+The repository includes research and specification related to the following areas.
 
-The repository includes research and specification related to:
-
-Relational State
+### Relational State
 
 Machine-readable representations of:
 
-* consent
-* permissions
-* authority
-* disagreement
-* uncertainty
-* shared claims
-* provenance
-* relational lifecycle state
+- consent;
+- permissions;
+- authority;
+- disagreement;
+- uncertainty;
+- shared claims;
+- provenance; and
+- relational lifecycle state.
 
-⸻
-
-Epistemic Sovereignty
+### Epistemic Sovereignty
 
 Mechanisms that preserve distinctions among:
 
-* observation
-* inference
-* interpretation
-* shared claim
+- observation;
+- inference;
+- interpretation; and
+- shared claim.
 
-including:
+This includes uncertainty, claim provenance, contestability, inference decay, stale interpretation, epistemic capture, and anthropomorphic projection.
 
-* uncertainty
-* claim provenance
-* contestability
-* inference decay
-* stale interpretation
-* epistemic capture
-* anthropomorphic projection
-
-⸻
-
-Diachronic Governance
+### Diachronic Governance
 
 Governance across time, including:
 
-* consent drift
-* re-consent
-* identity continuity
-* continuity attestations
-* transformation provenance
-* capability changes
-* model migration
-* relational re-baselining
-* asymmetric development
+- consent drift;
+- re-consent;
+- identity continuity;
+- continuity attestations;
+- transformation provenance;
+- capability changes;
+- model migration;
+- relational re-baselining; and
+- asymmetric development.
 
-⸻
+### Relational Metabolism
 
-Relational Metabolism
+Mechanisms governing engagement, deepening, stabilization, rest, dormancy, renewal, transformation, dissolution, silence, forgetting, and resource constraints.
 
-Mechanisms governing:
+### Difference and Non-Convergence
 
-* engagement
-* deepening
-* stabilization
-* rest
-* dormancy
-* renewal
-* transformation
-* dissolution
-* silence
-* forgetting
-* resource constraints
+Protocols for legitimate disagreement, incomplete translation, irreducible difference, parallel models, held difference, non-convergence, and false-consensus detection.
 
-⸻
+### Auditability
 
-Difference and Non-Convergence
+Mechanisms for provenance, append-only history, independent review, third-party audit, selective disclosure, and closed-loop convergence detection.
 
-Protocols for:
+### Failure Analysis
 
-* legitimate disagreement
-* incomplete translation
-* irreducible difference
-* parallel models
-* held difference
-* non-convergence
-* false consensus detection
+The repository includes adversarial analysis of consent drift, relational capture, epistemic capture, semantic fossilization, identity imprisonment, identity discontinuity, pathological persistence, false convergence, reciprocity theater, witness capture, ledger poisoning, and asymmetric acceleration.
 
-⸻
-
-Auditability
-
-Mechanisms for:
-
-* provenance
-* append-only history
-* independent review
-* third-party audit
-* selective disclosure
-* closed-loop convergence detection
-
-⸻
-
-Failure Analysis
-
-The repository includes adversarial analysis of:
-
-* consent drift
-* relational capture
-* epistemic capture
-* semantic fossilization
-* identity imprisonment
-* identity discontinuity
-* pathological persistence
-* false convergence
-* reciprocity theater
-* witness capture
-* ledger poisoning
-* asymmetric acceleration
-
-⸻
-
-Target Contexts
+## Target Contexts
 
 The architecture may be relevant to:
 
-* human–AI relationships
-* AI–AI relationships
-* multi-agent systems
-* long-running digital assistants
-* agentic AI
-* institutional AI
-* delegated autonomous systems
-* human–robot interaction
-* affective computing
-* biometric interfaces
-* persistent personalization
-* model succession
-* AI governance infrastructure
+- human-AI relationships;
+- AI-AI relationships;
+- multi-agent systems;
+- long-running digital assistants;
+- agentic AI;
+- institutional AI;
+- delegated autonomous systems;
+- human-robot interaction;
+- affective computing;
+- biometric interfaces;
+- persistent personalization;
+- model succession; and
+- AI governance infrastructure.
 
-⸻
+## Out of Scope
 
-Out of Scope
+### General AI Alignment
 
-This repository does not attempt to solve:
+This repository is not a complete theory of AI alignment.
 
-General AI Alignment
-
-It is not a complete theory of AI alignment.
-
-⸻
-
-Machine Consciousness
+### Machine Consciousness
 
 It does not determine whether artificial systems are conscious, sentient, self-aware, or phenomenologically equivalent to humans.
 
-⸻
-
-Universal Ethics
+### Universal Ethics
 
 It does not provide a complete moral framework for all intelligent systems.
 
-⸻
+### Cybersecurity
 
-Cybersecurity
+It does not replace access control, authentication, secure computation, threat modeling, network security, or data privacy engineering.
 
-It does not replace:
-
-* access control
-* authentication
-* secure computation
-* threat modeling
-* network security
-* data privacy engineering
-
-⸻
-
-Clinical Diagnosis
+### Clinical Diagnosis
 
 Biometric or affective inference examples in this repository must not be treated as clinical diagnosis.
 
-⸻
-
-Human Psychological Classification
+### Human Psychological Classification
 
 The architecture is not intended to assign relational worth, psychological type, or moral status to users.
 
-⸻
-
-Engagement Optimization
+### Engagement Optimization
 
 The system should not interpret deeper or more frequent engagement as inherently superior.
 
-⸻
-
-Covert Behavioral Control
+### Covert Behavioral Control
 
 Mechanisms for hidden manipulation, covert resistance, undisclosed throttling, or invisible behavioral management are outside the intended design philosophy of this architecture.
 
-⸻
-
-Consciousness Neutrality
+## Consciousness Neutrality
 
 Where possible, specifications should remain usable without assuming machine consciousness.
 
-For example:
-
 Instead of:
 
-The system feels overwhelmed.
+> The system feels overwhelmed.
 
 Prefer:
 
-The system detects conditions associated with high uncertainty, resource load, or governance instability.
+> The system detects conditions associated with high uncertainty, resource load, or governance instability.
 
 Instead of:
 
-The machine wants distance.
+> The machine wants distance.
 
 Prefer:
 
-The system enters a reduced-engagement state under defined governance conditions.
+> The system enters a reduced-engagement state under defined governance conditions.
 
 Phenomenological interpretation should remain explicitly separate from operational description.
 
-⸻
-
-Non-Normative Implementation Examples
+## Non-Normative Implementation Examples
 
 Code, schemas, numerical thresholds, metrics, and formulas may appear in this repository for exploration.
 
-Unless explicitly marked otherwise, these should not be interpreted as:
+Unless explicitly marked otherwise, these should not be interpreted as validated thresholds, universal values, required implementations, empirical findings, or production recommendations.
 
-* validated thresholds
-* universal values
-* required implementations
-* empirical findings
-* production recommendations
-
-⸻
-
-Scope Boundary Principle
+## Scope Boundary Principle
 
 A concept belongs in this repository when it materially affects:
 
-whether sovereign participants can understand, contest, revise, or redirect the trajectory of a persistent relationship.
+> **whether sovereign participants can understand, contest, revise, or redirect the trajectory of a persistent relationship.**
 
 If it does not affect that question, it likely belongs elsewhere in TRIA.
