@@ -2,10 +2,10 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://trivianinstitute.org/schemas/tria-diachronic-sovereignty/relational-phase.schema.json",
   "title": "TRIA Relational Phase",
-  "description": "Draft schema for lifecycle state. Phase is a governance category, not a claim about sentiment, intimacy, or consciousness.",
+  "description": "Draft schema for a scoped relational lifecycle record. A phase is a governance category, not a claim about sentiment, intimacy, consciousness, or success. Multiple scoped phase records may be simultaneously active; this schema does not require one exclusive global phase.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["phase_id", "relationship_id", "phase", "effective_at", "recorded_at"],
+  "required": ["phase_id", "relationship_id", "phase", "effective_at", "recorded_at", "status"],
   "properties": {
     "phase_id": {"type": "string", "minLength": 1},
     "relationship_id": {"type": "string", "minLength": 1},
@@ -13,13 +13,21 @@
       "type": "string",
       "enum": ["engage", "deepen", "stabilize", "rest", "dormant", "renew", "transform", "dissolved", "unknown"]
     },
-    "scope": {"type": ["string", "null"]},
+    "status": {
+      "type": "string",
+      "enum": ["proposed", "active", "ended", "disputed", "superseded"]
+    },
+    "scope": {
+      "type": ["string", "null"],
+      "description": "Optional domain or relational scope to which this phase applies. Different scopes may carry different active phases."
+    },
     "effective_at": {"type": "string", "format": "date-time"},
     "ended_at": {"type": ["string", "null"], "format": "date-time"},
     "trigger": {"type": ["string", "null"]},
     "resource_boundary_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
     "consent_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
     "provenance_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "dispute_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
     "supersedes": {"type": ["string", "null"]},
     "recorded_at": {"type": "string", "format": "date-time"}
   }
