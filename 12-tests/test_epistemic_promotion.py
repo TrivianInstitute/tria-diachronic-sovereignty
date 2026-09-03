@@ -24,6 +24,20 @@ def test_observation_does_not_become_shared_claim_without_acknowledgement():
     )
 
 
+def test_shared_claim_scope_must_be_explicit_and_non_empty():
+    claim = make_claim(acknowledged_by=("agent-a", "agent-b"))
+    assert not can_promote(claim, ClaimType.SHARED_CLAIM)
+
+
+def test_all_required_participants_must_acknowledge_shared_claim():
+    claim = make_claim(acknowledged_by=("agent-a",))
+    assert not can_promote(
+        claim,
+        ClaimType.SHARED_CLAIM,
+        required_participants=("agent-a", "agent-b"),
+    )
+
+
 def test_disputed_claim_cannot_be_promoted_to_shared_claim():
     claim = make_claim(
         claim_type=ClaimType.INTERPRETATION,
