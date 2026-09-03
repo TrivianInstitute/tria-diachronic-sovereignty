@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://trivianinstitute.org/schemas/tria-diachronic-sovereignty/epistemic-claim.schema.json",
+  "title": "TRIA Epistemic Claim",
+  "description": "Draft schema for explicitly typed claims. Epistemic type must not be silently promoted by consumers.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["claim_id", "relationship_id", "epistemic_type", "content", "source_actor", "recorded_at", "status"],
+  "properties": {
+    "claim_id": {"type": "string", "minLength": 1},
+    "relationship_id": {"type": "string", "minLength": 1},
+    "epistemic_type": {
+      "type": "string",
+      "enum": ["observation", "inference", "interpretation", "shared_claim"]
+    },
+    "content": {"type": "string", "minLength": 1},
+    "source_actor": {"type": "string", "minLength": 1},
+    "subject_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "evidence_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "provenance_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "derived_from": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "scope": {"type": ["string", "null"]},
+    "uncertainty_note": {"type": ["string", "null"]},
+    "status": {
+      "type": "string",
+      "enum": ["active", "disputed", "superseded", "expired", "withdrawn", "unknown"]
+    },
+    "valid_from": {"type": ["string", "null"], "format": "date-time"},
+    "valid_until": {"type": ["string", "null"], "format": "date-time"},
+    "review_after": {"type": ["string", "null"], "format": "date-time"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "supersedes": {"type": ["string", "null"]},
+    "dispute_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+  }
+}
