@@ -262,9 +262,9 @@ Copyright © 2026 Sarasha Elion. Published by Trivian Institute.
 The repository uses an explicit split license:
 
 - **Research prose, conceptual documentation, examples, provenance records, and specification schemas:** CC BY-NC-SA 4.0.
-- **Reference implementation, Python tests, and software-execution automation/configuration:** AGPL-3.0-only.
+- **Reference implementation, Python tests, and software-execution automation/configuration:** PolyForm Noncommercial License 1.0.0.
 
-Separate commercial licensing may be available from the copyright holder.
+**Commercial use is not permitted under either public noncommercial license.** Commercial deployment, incorporation into a commercial product or service, or use on behalf of a for-profit business requires a separate written commercial license from Trivian Institute.
 
 See [`LICENSE.md`](LICENSE.md) and [`SOFTWARE_LICENSE.md`](SOFTWARE_LICENSE.md). Commercial licensing inquiries: [connect@trivianinstitute.org](mailto:connect@trivianinstitute.org).
 
