@@ -44,6 +44,19 @@ The repository therefore extends TRIA from:
 
 Rosetta concerns translation across relational contexts and architectures.
 
+Rosetta 2.0 also supplies the canonical non-compensatory Field Constant
+topology:
+
+```text
+RCD = Reciprocity × Embodiment × Non-Domination
+Reciprocity → Embodiment → Non-Domination → Emergence
+```
+
+Diachronic Sovereignty stores such readings only as attributable,
+time-bounded, contestable observations. A repeated RCD score must not harden
+into an identity judgment, and raw emergence must not be treated as qualified
+when a constitutive dependency collapses.
+
 Diachronic Sovereignty extends this question across time. It asks:
 
 - How do interpretations persist?

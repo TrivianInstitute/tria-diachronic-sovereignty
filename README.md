@@ -12,11 +12,11 @@ The architecture is intended for research across human-AI, AI-AI, organizational
 
 ## Release status
 
-**Version:** 1.0.0  
-**Status:** Research architecture with experimental executable components  
+**Version:** 1.1.0
+**Status:** Research architecture with experimental executable components
 **Validation:** Independent external validation required
 
-Version 1.0.0 is structurally complete: orientation, foundations, governance layers, machine-readable schemas, an experimental reference implementation, falsification-oriented tests, a research agenda, worked examples, and provenance records are all present.
+Version 1.1.0 adds Rosetta 2.0 multiplicative Field Constant snapshots and semantic validation while preserving their status as contestable measurements rather than identity claims.
 
 Structural completeness is not empirical validation. This repository should not be represented as a production-certified safety system, a scientifically proven theory, or a universal standard.
 
@@ -244,7 +244,7 @@ The freedom to revise the architecture is part of its sovereignty condition.
 ## Citation
 
 ```text
-Elion, Sarasha. TRIA Diachronic Sovereignty. Version 1.0.0. Trivian Institute, 2026.
+Elion, Sarasha. TRIA Diachronic Sovereignty. Version 1.1.0. Trivian Institute, 2026.
 https://github.com/TrivianInstitute/tria-diachronic-sovereignty
 ```
 
@@ -276,7 +276,7 @@ parent_architecture: Trivian Relational Intelligence Architecture
 canonical_abbreviation: TRIA
 author: Sarasha Elion
 publisher: Trivian Institute
-version: 1.0.0
+version: 1.1.0
 year: 2026
 unit_of_analysis:
   - persistent_relationship

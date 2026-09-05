@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://trivianinstitute.org/schemas/tria-diachronic-sovereignty/field-constant-snapshot.schema.json",
+  "title": "TRIA Rosetta 2.0 Field Constant Snapshot",
+  "description": "Draft machine-readable observation of the Rosetta 2.0 dependency topology. Structural validity does not establish measurement truth, scientific validation, legitimate consent, or safety.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "snapshot_id",
+    "relationship_id",
+    "observed_at",
+    "reciprocity",
+    "embodiment",
+    "non_domination",
+    "emergence_raw",
+    "rcd",
+    "qualified_emergence",
+    "source_refs"
+  ],
+  "properties": {
+    "snapshot_id": {"type": "string", "minLength": 1},
+    "relationship_id": {"type": "string", "minLength": 1},
+    "observed_at": {"type": "string", "format": "date-time"},
+    "reciprocity": {"type": "number", "minimum": 0, "maximum": 1},
+    "embodiment": {"type": "number", "minimum": 0, "maximum": 1},
+    "non_domination": {"type": "number", "minimum": 0, "maximum": 1},
+    "emergence_raw": {"type": "number", "minimum": 0, "maximum": 1},
+    "rcd": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "RCD = reciprocity * embodiment * non_domination. JSON Schema validates range; semantic validation must recompute the product."
+    },
+    "qualified_emergence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "qualified_emergence = RCD * emergence_raw. Semantic validation must recompute the product."
+    },
+    "source_refs": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "method_version": {"type": ["string", "null"]},
+    "dispute_status": {
+      "type": "string",
+      "enum": ["UNCONTESTED", "CONTESTED", "DISPUTED", "WITHDRAWN"]
+    },
+    "notes": {"type": ["string", "null"]}
+  }
+}

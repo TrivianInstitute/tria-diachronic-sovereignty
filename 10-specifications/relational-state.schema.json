@@ -34,6 +34,12 @@
     "provenance_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
     "unresolved_difference_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
     "transformation_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "field_constant_snapshot_refs": {
+      "type": "array",
+      "description": "References to Rosetta 2.0 multiplicative field-constant observations. These are contestable measurements, not identity claims.",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
     "projection_basis_refs": {
       "type": "array",
       "description": "References to events, records, or reducers used to derive this current-state projection.",

@@ -2,6 +2,14 @@
 
 **Epistemic status:** PROVENANCE RECORD
 
+## v1.1.0 — 2026-09-05
+
+Added compatibility with the Rosetta 2.0 non-compensatory Field Constant
+topology. Diachronic state may reference attributable field-constant snapshots,
+and the reference implementation now verifies both RCD and downstream qualified
+emergence. These readings remain contestable observations rather than identity
+claims or validated universal measures.
+
 This file records architectural development milestones at the repository layer level. It complements Git history, pull-request history, release tags, and `CHANGELOG.md` by preserving architectural meaning.
 
 ## v1.0.0 — 2026-09-03

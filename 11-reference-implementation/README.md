@@ -13,6 +13,7 @@ It is not production software. Its purpose is to make the architecture executabl
 - `continuity/` — continuity attestations and re-consent triggers
 - `metabolism/` — lifecycle transitions without engagement maximization
 - `audit/` — bounded audit reconstruction and contestable findings
+- `measurement/` — semantic validation of Rosetta 2.0 multiplicative snapshots
 
 ## Design constraints
 

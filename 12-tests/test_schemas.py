@@ -17,6 +17,7 @@ def test_expected_schema_files_exist() -> None:
         "continuity-attestation.schema.json",
         "relational-phase.schema.json",
         "failure-event.schema.json",
+        "field-constant-snapshot.schema.json",
     }
     assert {path.name for path in SCHEMA_FILES} == expected
 
