@@ -4,6 +4,22 @@ All notable architectural and implementation changes to TRIA Diachronic Sovereig
 
 The format is inspired by Keep a Changelog, but entries also distinguish changes in epistemic or governance status where relevant.
 
+## [1.1.0] — 2026-09-05
+
+### Added
+
+- Rosetta 2.0 field-constant snapshot schema;
+- semantic validation of `RCD = Reciprocity × Embodiment × Non-Domination`;
+- downstream validation of `qualified_emergence = RCD × emergence_raw`;
+- explicit relational-state references to contestable field measurements; and
+- failure tests preventing additive compensation and emergence qualification after dependency collapse.
+
+### Clarified
+
+- field-constant observations remain attributable, time-bounded, and contestable;
+- repeated measurements must not become permanent identity judgments; and
+- schema validity alone cannot verify multiplicative semantic consistency.
+
 ## [1.0.0] — 2026-09-03
 
 ### Added
