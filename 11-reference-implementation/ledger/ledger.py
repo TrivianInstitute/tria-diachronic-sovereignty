@@ -4,12 +4,32 @@ from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from typing import Any, Iterable
 from uuid import uuid4
+from copy import deepcopy
+from threading import RLock
 
 
 OPERATIVE = "OPERATIVE"
 PENDING = "PENDING"
 REJECTED = "REJECTED"
 SUPERSEDED = "SUPERSEDED"
+
+
+def _validate_payload(value, ancestors=None):
+    """Only owned data containers; arbitrary objects can subvert deepcopy."""
+    if type(value) in (str, int, float, bool, type(None)):
+        return
+    if type(value) not in (dict, list, tuple, set, frozenset):
+        raise ValueError("payload contains unsupported object type")
+    ancestors = set() if ancestors is None else ancestors
+    if id(value) in ancestors:
+        raise ValueError("cyclic payload is unsupported")
+    ancestors.add(id(value))
+    try:
+        values = list(value.keys()) + list(value.values()) if type(value) is dict else value
+        for child in values:
+            _validate_payload(child, ancestors)
+    finally:
+        ancestors.remove(id(value))
 
 
 @dataclass(frozen=True)
@@ -40,21 +60,23 @@ class RelationalLedger:
 
     def __init__(self) -> None:
         self._events: list[LedgerEvent] = []
+        self._lock = RLock()
 
     def append(self, event: LedgerEvent) -> LedgerEvent:
-        if any(existing.event_id == event.event_id for existing in self._events):
-            raise ValueError(f"duplicate event_id: {event.event_id}")
-        if event.projection_status not in {OPERATIVE, PENDING, REJECTED, SUPERSEDED}:
-            raise ValueError(f"unsupported projection_status: {event.projection_status}")
-        self._events.append(event)
-        return event
+        with self._lock:
+            if any(existing.event_id == event.event_id for existing in self._events):
+                raise ValueError(f"duplicate event_id: {event.event_id}")
+            if event.projection_status not in {OPERATIVE, PENDING, REJECTED, SUPERSEDED}:
+                raise ValueError(f"unsupported projection_status: {event.projection_status}")
+            _validate_payload(event.payload)
+            retained = deepcopy(event)
+            self._events.append(retained)
+            return deepcopy(retained)
 
     def events(self, relationship_id: str | None = None) -> tuple[LedgerEvent, ...]:
-        if relationship_id is None:
-            return tuple(self._events)
-        return tuple(
-            event for event in self._events if event.relationship_id == relationship_id
-        )
+        with self._lock:
+            return tuple(deepcopy(event) for event in self._events
+                         if relationship_id is None or event.relationship_id == relationship_id)
 
     def project(self, relationship_id: str) -> dict[str, Any]:
         """Project current operative state from explicitly operative events.

@@ -5,7 +5,7 @@ message: >-
   metadata in this file.
 title: "TRIA Diachronic Sovereignty"
 type: software
-version: "1.1.0"
+version: "1.1.1"
 date-released: 2026-09-05
 abstract: >-
   A falsifiable governance architecture for persistent relational intelligence,
