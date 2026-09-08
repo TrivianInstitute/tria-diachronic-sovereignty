@@ -1,3 +1,5 @@
+> Candidate remediation behavior, compatibility and evidence limits: [REMEDIATION.md](REMEDIATION.md).
+
 # TRIA Diachronic Sovereignty
 
 **A governance architecture for persistent relational intelligence, epistemic sovereignty, and mutual transformation.**
@@ -276,7 +278,7 @@ parent_architecture: Trivian Relational Intelligence Architecture
 canonical_abbreviation: TRIA
 author: Sarasha Elion
 publisher: Trivian Institute
-version: 1.1.0
+version: 1.1.1
 year: 2026
 unit_of_analysis:
   - persistent_relationship
