@@ -4,57 +4,53 @@
 
 Copyright © 2026 Sarasha Elion. Published and stewarded by Trivian Institute.
 
-This repository uses an explicit split-license structure.
+Effective September 9, 2026, this repository uses an open-source / open-knowledge split-license structure for the licensor-owned current revision.
 
 ## Research, documentation, and specifications
 
-Unless a file, directory, or accompanying notice states otherwise, research prose, conceptual documentation, examples, provenance records, and machine-readable specification schemas are licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)**.
+Unless a file, directory, or accompanying notice states otherwise, research prose, conceptual documentation, examples, provenance records, diagrams, and machine-readable specification schemas are licensed under the **Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)**.
 
-Controlling terms:
-https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+License deed: https://creativecommons.org/licenses/by-sa/4.0/
+Legal code: https://creativecommons.org/licenses/by-sa/4.0/legalcode
 
-Subject to those terms, covered materials may be copied, shared, adapted, translated, taught, studied, and used for noncommercial research and public-interest work with attribution, indication of changes, and ShareAlike treatment of adaptations.
+Covered materials may be copied, shared, adapted, translated, taught, studied, and used commercially or noncommercially subject to attribution, indication of changes, and ShareAlike requirements.
 
 Recommended attribution:
 
 ```text
 TRIA Diachronic Sovereignty
 © 2026 Sarasha Elion. Published by Trivian Institute.
-Licensed under CC BY-NC-SA 4.0 for covered research, documentation, and specifications.
+Licensed under CC BY-SA 4.0 for covered research, documentation, and specifications.
 Source: https://github.com/TrivianInstitute/tria-diachronic-sovereignty
 ```
 
 ## Software
 
-The executable Python reference implementation in `11-reference-implementation/`, the Python tests in `12-tests/`, and repository automation/configuration whose primary purpose is to execute or test that software are **not** licensed under CC BY-NC-SA 4.0.
+The executable Python reference implementation in `11-reference-implementation/`, the Python tests in `12-tests/`, and repository automation/configuration whose primary purpose is to execute or test that software are licensed under the **Mozilla Public License Version 2.0 (MPL-2.0)** as described in [`SOFTWARE_LICENSE.md`](SOFTWARE_LICENSE.md), unless a file or third-party notice states otherwise.
 
-Those software materials are made available for noncommercial use under the **PolyForm Noncommercial License 1.0.0**, as described in [`SOFTWARE_LICENSE.md`](SOFTWARE_LICENSE.md), unless a file states otherwise.
+Commercial use is permitted under MPL-2.0. Covered source files and modifications to those covered files remain governed by MPL-2.0 when distributed.
 
-## Commercial use
+## Machine use
 
-Neither public license grants commercial-use rights.
+The public licenses are intended to permit computational use as well as human use, including indexing, parsing, retrieval, embedding, evaluation, analysis, implementation, testing, and other uses permitted by the applicable license. Preserve provenance and applicable license metadata when redistributing covered materials.
 
-Commercial deployment, incorporation into a commercial product or service, use on behalf of a for-profit business, paid hosting, paid training or consulting based substantially on the covered materials, or other commercial use requires a separate written commercial license from **Trivian Institute**.
+## Trademarks, certification, and endorsement
 
-Commercial licensing inquiries:
+These licenses do not grant trademark, service-mark, logo, certification-mark, endorsement, or official-affiliation rights except as necessary for accurate attribution. Use of open TRIA materials does not by itself imply endorsement, certification, conformance, or official affiliation with Trivian Institute.
 
-**Trivian Institute**  
-connect@trivianinstitute.org  
-https://trivianinstitute.org
+## Prior releases and exclusions
 
-No commercial permission is granted by repository access, discussion, proposal, contribution, or inquiry. Commercial permission requires a separate written agreement authorized by the copyright holder.
+Earlier releases were distributed under CC BY-NC-SA 4.0 for covered research/documentation and PolyForm Noncommercial 1.0.0 for covered software. Those earlier grants are not revoked. This current licensor-owned revision is additionally distributed under CC BY-SA 4.0 and MPL-2.0 as of September 9, 2026.
 
-## Exclusions
-
-These public licenses do not automatically grant rights to third-party materials, datasets, model weights, trademarks, names, logos, patents, privacy or publicity rights, confidential information, or materials carrying separate terms. When a specific file carries a different notice, that specific notice controls.
+These licenses do not automatically grant rights to third-party materials, datasets, model weights, trademarks, names, logos, privacy or publicity rights, confidential information, or materials carrying separate terms. When a specific third-party notice applies, that notice controls that material.
 
 ## Contributions
 
-Contributors retain ownership of their original contributions unless a separate written agreement states otherwise. Accepted contributions may be distributed as part of this repository under the license applicable to the material they modify. Contributors are responsible for having the rights necessary to submit their contributions.
+Contributors retain ownership of their original contributions unless a separate written agreement states otherwise. Nothing here purports to relicense a third party's material without the necessary authority.
 
 ## No warranty
 
-The materials are provided **as-is** for research, evaluation, and development. To the maximum extent permitted by law, no warranty is given regarding accuracy, completeness, fitness for a particular purpose, noninfringement, safety, performance, research validity, or suitability for deployment.
+The materials are provided as-is for research, evaluation, and development. No warranty is given regarding accuracy, completeness, fitness for a particular purpose, noninfringement, safety, performance, research validity, or suitability for deployment.
 
 Passing tests, schemas, simulations, and reference implementations do not constitute independent empirical validation, professional advice, certification, or a guarantee of outcomes.
 
@@ -62,7 +58,7 @@ Passing tests, schemas, simulations, and reference implementations do not consti
 
 **Copyright holder:** Sarasha Elion  
 **Publisher and research steward:** Trivian Institute  
-**Research/documentation/specification license:** CC BY-NC-SA 4.0  
-**Reference software/test license:** PolyForm Noncommercial 1.0.0  
-**Commercial licensing:** Separate written agreement required  
+**Research/documentation/specification license:** CC BY-SA 4.0  
+**Reference software/test license:** MPL-2.0  
+**Effective open-source transition:** September 9, 2026  
 **Contact:** connect@trivianinstitute.org
