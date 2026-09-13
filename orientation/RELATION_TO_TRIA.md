@@ -138,6 +138,12 @@ For example:
 - **Difference** becomes difference + persistent disagreement + non-convergence.
 - **Repair** becomes repair + re-baselining + transformation provenance.
 
+## Relationship to the Public Truth-Integrity Protocol
+
+The public `tria-sdk` implements a minimal Truth-Integrity Protocol for claim-scoped, evidence-backed assessment. Diachronic Sovereignty supplies the temporal governance around that protocol: prior-knowledge provenance, correction history, repeated-pattern attribution, contestation, appeal, and revision.
+
+The public assessment remains read-only and non-self-executing. Any private or host enforcement system must independently establish authority and preserve proportionality, restoration, and re-entry. Aporia may preserve ambiguity relevant to an assessment, but it does not decide whether deception occurred.
+
 ## Distinct Contribution
 
 The distinctive contribution of TRIA Diachronic Sovereignty is its treatment of:
