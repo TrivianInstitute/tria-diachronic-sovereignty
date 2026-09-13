@@ -80,6 +80,8 @@ Observation != Inference != Interpretation != Shared Claim
 
 This is a typing distinction, not a required maturity ladder. Any explicit change in epistemic authority must remain inspectable and governed.
 
+This layer also defines truth integrity across time. It distinguishes uncertainty, error, contradiction, probable deception, and adversarial manipulation; requires attributable evidence for intent-related inferences; and keeps diagnosis separate from enforcement authority.
+
 ### 04 — Diachronic Governance
 
 Governs continuity across change, including trajectory, consent drift, identity continuity, re-consent, re-baselining, model migration, capability asymmetry, and transformation provenance.
